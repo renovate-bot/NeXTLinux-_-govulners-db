@@ -5,10 +5,10 @@ import (
 
 	"github.com/nextlinux/govulners-db/internal"
 	"github.com/nextlinux/govulners-db/pkg/data"
-	"github.com/anchore/govulners-db/pkg/process/v3/transformers"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal/nvd"
-	govulnersDB "github.com/anchore/govulners/govulners/db/v3"
+	"github.com/nextlinux/govulners-db/pkg/process/v3/transformers"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal/nvd"
+	govulnersDB "github.com/nextlinux/govulners/govulners/db/v3"
 )
 
 const (

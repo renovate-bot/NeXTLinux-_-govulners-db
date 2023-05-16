@@ -1,6 +1,6 @@
 package data
 
-import "github.com/anchore/govulners-db/pkg/provider/unmarshal"
+import "github.com/nextlinux/govulners-db/pkg/provider/unmarshal"
 
 // Transformers are functions that know how ta take individual data shapes defined in the unmarshal package and
 // reshape the data into data.Entry objects that are writable by a data.Writer. Transformers are dependency-injected

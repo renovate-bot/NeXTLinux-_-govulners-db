@@ -10,12 +10,12 @@ import (
 
 	"github.com/spf13/afero"
 
-	"github.com/anchore/govulners-db/internal/file"
-	"github.com/anchore/govulners-db/internal/log"
-	"github.com/anchore/govulners-db/pkg/data"
-	"github.com/anchore/govulners/govulners/db"
-	govulnersDB "github.com/anchore/govulners/govulners/db/v5"
-	govulnersDBStore "github.com/anchore/govulners/govulners/db/v5/store"
+	"github.com/nextlinux/govulners-db/internal/file"
+	"github.com/nextlinux/govulners-db/internal/log"
+	"github.com/nextlinux/govulners-db/pkg/data"
+	"github.com/nextlinux/govulners/govulners/db"
+	govulnersDB "github.com/nextlinux/govulners/govulners/db/v5"
+	govulnersDBStore "github.com/nextlinux/govulners/govulners/db/v5/store"
 )
 
 // TODO: add NVDNamespace const to govulners.db package?

@@ -10,9 +10,9 @@ import (
 	"github.com/google/shlex"
 	"github.com/scylladb/go-set/strset"
 
-	"github.com/anchore/govulners-db/internal/log"
-	"github.com/anchore/govulners-db/pkg/provider"
-	"github.com/anchore/govulners-db/pkg/provider/providers/external"
+	"github.com/nextlinux/govulners-db/internal/log"
+	"github.com/nextlinux/govulners-db/pkg/provider"
+	"github.com/nextlinux/govulners-db/pkg/provider/providers/external"
 )
 
 type Config struct {

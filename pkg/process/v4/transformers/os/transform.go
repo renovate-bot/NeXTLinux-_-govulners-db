@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/anchore/govulners-db/pkg/data"
-	"github.com/anchore/govulners-db/pkg/process/common"
-	"github.com/anchore/govulners-db/pkg/process/v4/transformers"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal"
-	govulnersDB "github.com/anchore/govulners/govulners/db/v4"
-	"github.com/anchore/govulners/govulners/db/v4/namespace"
-	"github.com/anchore/govulners/govulners/distro"
+	"github.com/nextlinux/govulners-db/pkg/data"
+	"github.com/nextlinux/govulners-db/pkg/process/common"
+	"github.com/nextlinux/govulners-db/pkg/process/v4/transformers"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal"
+	govulnersDB "github.com/nextlinux/govulners/govulners/db/v4"
+	"github.com/nextlinux/govulners/govulners/db/v4/namespace"
+	"github.com/nextlinux/govulners/govulners/distro"
 )
 
 const (

@@ -1,8 +1,8 @@
 package transformers
 
 import (
-	"github.com/anchore/govulners-db/pkg/data"
-	govulnersDB "github.com/anchore/govulners/govulners/db/v5"
+	"github.com/nextlinux/govulners-db/pkg/data"
+	govulnersDB "github.com/nextlinux/govulners/govulners/db/v5"
 )
 
 func NewEntries(vs []govulnersDB.Vulnerability, metadata govulnersDB.VulnerabilityMetadata) []data.Entry {

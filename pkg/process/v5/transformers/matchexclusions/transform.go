@@ -1,9 +1,9 @@
 package matchexclusions
 
 import (
-	"github.com/anchore/govulners-db/pkg/data"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal"
-	govulnersDB "github.com/anchore/govulners/govulners/db/v5"
+	"github.com/nextlinux/govulners-db/pkg/data"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal"
+	govulnersDB "github.com/nextlinux/govulners/govulners/db/v5"
 )
 
 func Transform(matchExclusion unmarshal.MatchExclusion) ([]data.Entry, error) {

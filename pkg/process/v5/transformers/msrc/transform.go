@@ -3,13 +3,13 @@ package msrc
 import (
 	"fmt"
 
-	"github.com/anchore/govulners-db/pkg/data"
-	"github.com/anchore/govulners-db/pkg/process/common"
-	"github.com/anchore/govulners-db/pkg/process/v5/transformers"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal"
-	govulnersDB "github.com/anchore/govulners/govulners/db/v5"
-	"github.com/anchore/govulners/govulners/db/v5/namespace"
-	"github.com/anchore/govulners/govulners/distro"
+	"github.com/nextlinux/govulners-db/pkg/data"
+	"github.com/nextlinux/govulners-db/pkg/process/common"
+	"github.com/nextlinux/govulners-db/pkg/process/v5/transformers"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal"
+	govulnersDB "github.com/nextlinux/govulners/govulners/db/v5"
+	"github.com/nextlinux/govulners/govulners/db/v5/namespace"
+	"github.com/nextlinux/govulners/govulners/distro"
 )
 
 // Transform gets called by the parser, which consumes entries from the JSON files previously pulled. Each VulnDBVulnerability represents
@@ -25,7 +25,7 @@ func Transform(vulnerability unmarshal.MSRCVulnerability) ([]data.Entry, error) 
 
 	entryNamespace := govulnersNamespace.String()
 
-	// In anchore-enterprise windows analyzer, "base" represents unpatched windows images (images with no KBs).
+	// In nextlinux-enterprise windows analyzer, "base" represents unpatched windows images (images with no KBs).
 	// If a vulnerability exists for a Microsoft Product ID and the image has no KBs (which are patches),
 	// then the image must be vulnerable to the image.
 	//nolint:gocritic

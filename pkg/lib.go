@@ -3,9 +3,9 @@ package pkg
 import (
 	"github.com/wagoodman/go-partybus"
 
-	"github.com/anchore/go-logger"
-	"github.com/anchore/govulners-db/internal/bus"
-	"github.com/anchore/govulners-db/internal/log"
+	"github.com/nextlinux/go-logger"
+	"github.com/nextlinux/govulners-db/internal/bus"
+	"github.com/nextlinux/govulners-db/internal/log"
 )
 
 func SetLogger(l logger.Logger) {

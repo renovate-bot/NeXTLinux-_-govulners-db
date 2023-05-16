@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/wagoodman/go-partybus"
 
-	"github.com/anchore/govulners-db/internal/ui"
-	"github.com/anchore/govulners-db/pkg/event"
+	"github.com/nextlinux/govulners-db/internal/ui"
+	"github.com/nextlinux/govulners-db/pkg/event"
 )
 
 var _ ui.UI = (*uiMock)(nil)

@@ -12,9 +12,9 @@ import (
 
 	"github.com/spf13/afero"
 
-	"github.com/anchore/govulners-db/internal/log"
-	"github.com/anchore/govulners-db/internal/tar"
-	"github.com/anchore/govulners/govulners/db"
+	"github.com/nextlinux/govulners-db/internal/log"
+	"github.com/nextlinux/govulners-db/internal/tar"
+	"github.com/nextlinux/govulners/govulners/db"
 )
 
 func randomString() (string, error) {

@@ -16,8 +16,8 @@ import (
 	"github.com/hashicorp/go-getter/helper/url"
 	"github.com/wagoodman/go-progress"
 
-	"github.com/anchore/go-logger"
-	"github.com/anchore/govulners-db/internal/log"
+	"github.com/nextlinux/go-logger"
+	"github.com/nextlinux/govulners-db/internal/log"
 )
 
 var (

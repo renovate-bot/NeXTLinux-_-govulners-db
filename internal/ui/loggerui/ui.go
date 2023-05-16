@@ -10,9 +10,9 @@ import (
 	"github.com/wagoodman/go-partybus"
 	"github.com/wagoodman/go-progress"
 
-	"github.com/anchore/go-logger"
-	"github.com/anchore/govulners-db/internal/log"
-	"github.com/anchore/govulners-db/pkg/event"
+	"github.com/nextlinux/go-logger"
+	"github.com/nextlinux/govulners-db/internal/log"
+	"github.com/nextlinux/govulners-db/pkg/event"
 )
 
 type UI struct {

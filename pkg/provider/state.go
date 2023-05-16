@@ -11,8 +11,8 @@ import (
 
 	"github.com/OneOfOne/xxhash"
 
-	"github.com/anchore/govulners-db/internal/file"
-	"github.com/anchore/govulners-db/internal/log"
+	"github.com/nextlinux/govulners-db/internal/file"
+	"github.com/nextlinux/govulners-db/internal/log"
 )
 
 // data shape dictated by vunnel "provider workspace state" schema definition

@@ -7,9 +7,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/anchore/govulners-db/pkg/data"
-	testUtils "github.com/anchore/govulners-db/pkg/process/tests"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal"
+	"github.com/nextlinux/govulners-db/pkg/data"
+	testUtils "github.com/nextlinux/govulners-db/pkg/process/tests"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal"
 )
 
 func mockNVDProcessorTransform(vulnerability unmarshal.NVDVulnerability) ([]data.Entry, error) {

@@ -8,11 +8,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	testUtils "github.com/anchore/govulners-db/pkg/process/tests"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal"
-	govulnersDB "github.com/anchore/govulners/govulners/db/v5"
-	"github.com/anchore/govulners/govulners/db/v5/namespace"
-	"github.com/anchore/govulners/govulners/db/v5/namespace/language"
+	testUtils "github.com/nextlinux/govulners-db/pkg/process/tests"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal"
+	govulnersDB "github.com/nextlinux/govulners/govulners/db/v5"
+	"github.com/nextlinux/govulners/govulners/db/v5/namespace"
+	"github.com/nextlinux/govulners/govulners/db/v5/namespace/language"
 	syftPkg "github.com/anchore/syft/syft/pkg"
 )
 

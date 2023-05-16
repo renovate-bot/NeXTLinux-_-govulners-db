@@ -5,9 +5,9 @@ import (
 	"io"
 	"strings"
 
-	"github.com/anchore/govulners-db/internal/log"
-	"github.com/anchore/govulners-db/pkg/data"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal"
+	"github.com/nextlinux/govulners-db/internal/log"
+	"github.com/nextlinux/govulners-db/pkg/data"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal"
 )
 
 type githubProcessor struct {
@@ -46,7 +46,7 @@ func (p githubProcessor) Process(reader io.Reader) ([]data.Entry, error) {
 }
 
 func (p githubProcessor) IsSupported(schemaURL string) bool {
-	matchesSchemaType := strings.Contains(schemaURL, "https://raw.githubusercontent.com/anchore/vunnel/main/schema/vulnerability/github-security-advisory/schema-")
+	matchesSchemaType := strings.Contains(schemaURL, "https://raw.githubusercontent.com/nextlinux/vunnel/main/schema/vulnerability/github-security-advisory/schema-")
 	if !matchesSchemaType {
 		return false
 	}

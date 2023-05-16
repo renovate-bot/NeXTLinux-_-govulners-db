@@ -1,0 +1,88 @@
+package commands
+
+import (
+	"errors"
+
+	"github.com/spf13/cobra"
+	"github.com/spf13/pflag"
+	"github.com/spf13/viper"
+
+	"github.com/nextlinux/govulners-db/cmd/govulners-db/application"
+	"github.com/nextlinux/govulners-db/cmd/govulners-db/cli/options"
+	"github.com/nextlinux/govulners-db/internal/log"
+	"github.com/nextlinux/govulners-db/pkg/process"
+	"github.com/nextlinux/govulners-db/pkg/provider"
+	"github.com/nextlinux/govulners-db/pkg/provider/providers"
+	"github.com/nextlinux/govulners-db/pkg/provider/providers/vunnel"
+)
+
+var _ options.Interface = &pullConfig{}
+
+type pullConfig struct {
+	options.Pull     `yaml:"pull" json:"pull" mapstructure:"pull"`
+	options.Provider `yaml:"provider" json:"provider" mapstructure:"provider"`
+}
+
+func (o *pullConfig) AddFlags(flags *pflag.FlagSet) {
+	options.AddAllFlags(flags, &o.Pull, &o.Provider)
+}
+
+func (o *pullConfig) BindFlags(flags *pflag.FlagSet, v *viper.Viper) error {
+	return options.BindAllFlags(flags, v, &o.Pull, &o.Provider)
+}
+
+func Pull(app *application.Application) *cobra.Command {
+	cfg := pullConfig{
+		Pull:     options.DefaultPull(),
+		Provider: options.DefaultProvider(),
+	}
+
+	cmd := &cobra.Command{
+		Use:     "pull",
+		Short:   "pull and process all upstream vulnerability data",
+		Args:    cobra.NoArgs,
+		PreRunE: app.Setup(&cfg),
+		RunE: func(cmd *cobra.Command, args []string) error {
+			return app.Run(cmd.Context(), async(func() error {
+				return runPull(cfg)
+			}))
+		},
+	}
+
+	commonConfiguration(app, cmd, &cfg)
+
+	return cmd
+}
+
+func runPull(cfg pullConfig) error {
+	ps, err := providers.New(cfg.Root, vunnel.Config{
+		Config:           cfg.Vunnel.Config,
+		Executor:         cfg.Vunnel.Executor,
+		DockerTag:        cfg.Vunnel.DockerTag,
+		DockerImage:      cfg.Vunnel.DockerImage,
+		GenerateConfigs:  cfg.Vunnel.GenerateConfigs,
+		ExcludeProviders: cfg.Vunnel.ExcludeProviders,
+		Env:              cfg.Vunnel.Env,
+	}, cfg.Provider.Configs...)
+	if err != nil {
+		if errors.Is(err, providers.ErrNoProviders) {
+			log.Error("configure a provider via the application config or use -g to generate a list of configs from vunnel")
+		}
+		return err
+	}
+
+	if len(cfg.Provider.IncludeFilter) > 0 {
+		log.WithFields("keep-only", cfg.Provider.IncludeFilter).Debug("filtering providers by name")
+		ps = ps.Filter(cfg.Provider.IncludeFilter...)
+	}
+
+	c := process.PullConfig{
+		Parallelism: cfg.Parallelism,
+		Collection: provider.Collection{
+			Root:      cfg.Root,
+			Providers: ps,
+		},
+	}
+
+	return process.Pull(c)
+}

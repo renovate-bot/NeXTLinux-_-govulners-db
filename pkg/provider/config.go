@@ -1,6 +1,6 @@
 package provider
 
-import "github.com/anchore/govulners-db/internal/log"
+import "github.com/nextlinux/govulners-db/internal/log"
 
 type Collection struct {
 	Root      string

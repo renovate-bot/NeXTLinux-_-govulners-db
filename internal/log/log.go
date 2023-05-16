@@ -1,9 +1,9 @@
 package log
 
 import (
-	"github.com/anchore/go-logger"
-	"github.com/anchore/go-logger/adapter/discard"
-	"github.com/anchore/go-logger/adapter/redact"
+	"github.com/nextlinux/go-logger"
+	"github.com/nextlinux/go-logger/adapter/discard"
+	"github.com/nextlinux/go-logger/adapter/redact"
 )
 
 var (

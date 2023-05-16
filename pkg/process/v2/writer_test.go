@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/anchore/govulners-db/pkg/data"
-	govulnersDB "github.com/anchore/govulners/govulners/db/v2"
+	"github.com/nextlinux/govulners-db/pkg/data"
+	govulnersDB "github.com/nextlinux/govulners/govulners/db/v2"
 )
 
 var _ govulnersDB.VulnerabilityMetadataStoreReader = (*mockReader)(nil)

@@ -3,13 +3,13 @@ package nvd
 import (
 	"fmt"
 
-	"github.com/anchore/govulners-db/internal"
-	"github.com/anchore/govulners-db/pkg/data"
-	"github.com/anchore/govulners-db/pkg/process/v4/transformers"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal/nvd"
-	govulnersDB "github.com/anchore/govulners/govulners/db/v4"
-	"github.com/anchore/govulners/govulners/db/v4/namespace"
+	"github.com/nextlinux/govulners-db/internal"
+	"github.com/nextlinux/govulners-db/pkg/data"
+	"github.com/nextlinux/govulners-db/pkg/process/v4/transformers"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal/nvd"
+	govulnersDB "github.com/nextlinux/govulners/govulners/db/v4"
+	"github.com/nextlinux/govulners/govulners/db/v4/namespace"
 )
 
 const (

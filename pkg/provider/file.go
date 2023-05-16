@@ -7,7 +7,7 @@ import (
 	"github.com/OneOfOne/xxhash"
 	"github.com/spf13/afero"
 
-	"github.com/anchore/govulners-db/internal/file"
+	"github.com/nextlinux/govulners-db/internal/file"
 )
 
 type File struct {

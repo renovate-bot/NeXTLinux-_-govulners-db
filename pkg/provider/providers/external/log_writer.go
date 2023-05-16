@@ -5,7 +5,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/anchore/govulners-db/internal/log"
+	"github.com/nextlinux/govulners-db/internal/log"
 )
 
 var (

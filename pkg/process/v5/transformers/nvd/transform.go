@@ -1,13 +1,13 @@
 package nvd
 
 import (
-	"github.com/anchore/govulners-db/internal"
-	"github.com/anchore/govulners-db/pkg/data"
-	"github.com/anchore/govulners-db/pkg/process/v5/transformers"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal/nvd"
-	govulnersDB "github.com/anchore/govulners/govulners/db/v5"
-	"github.com/anchore/govulners/govulners/db/v5/namespace"
+	"github.com/nextlinux/govulners-db/internal"
+	"github.com/nextlinux/govulners-db/pkg/data"
+	"github.com/nextlinux/govulners-db/pkg/process/v5/transformers"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal/nvd"
+	govulnersDB "github.com/nextlinux/govulners/govulners/db/v5"
+	"github.com/nextlinux/govulners/govulners/db/v5/namespace"
 )
 
 func Transform(vulnerability unmarshal.NVDVulnerability) ([]data.Entry, error) {

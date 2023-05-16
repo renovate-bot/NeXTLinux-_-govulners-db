@@ -7,8 +7,8 @@ import (
 	"github.com/hashicorp/go-multierror"
 	"golang.org/x/sync/semaphore"
 
-	"github.com/anchore/govulners-db/internal/log"
-	"github.com/anchore/govulners-db/pkg/provider"
+	"github.com/nextlinux/govulners-db/internal/log"
+	"github.com/nextlinux/govulners-db/pkg/provider"
 )
 
 type PullConfig struct {

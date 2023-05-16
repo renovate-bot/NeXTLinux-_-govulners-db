@@ -6,9 +6,9 @@ import (
 
 	"github.com/umisama/go-cpe"
 
-	"github.com/anchore/govulners-db/internal/log"
-	"github.com/anchore/govulners-db/pkg/process/common"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal/nvd"
+	"github.com/nextlinux/govulners-db/internal/log"
+	"github.com/nextlinux/govulners-db/pkg/process/common"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal/nvd"
 )
 
 const (

@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/anchore/govulners-db/pkg/data"
-	"github.com/anchore/govulners-db/pkg/process/common"
-	"github.com/anchore/govulners-db/pkg/process/v4/transformers"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal"
-	govulnersDB "github.com/anchore/govulners/govulners/db/v4"
-	"github.com/anchore/govulners/govulners/db/v4/namespace"
-	"github.com/anchore/govulners/govulners/distro"
+	"github.com/nextlinux/govulners-db/pkg/data"
+	"github.com/nextlinux/govulners-db/pkg/process/common"
+	"github.com/nextlinux/govulners-db/pkg/process/v4/transformers"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal"
+	govulnersDB "github.com/nextlinux/govulners/govulners/db/v4"
+	"github.com/nextlinux/govulners/govulners/db/v4/namespace"
+	"github.com/nextlinux/govulners/govulners/distro"
 )
 
 const (
@@ -49,7 +49,7 @@ func Transform(vulnerability unmarshal.MSRCVulnerability) ([]data.Entry, error) 
 
 	entryNamespace := govulnersNamespace.String()
 
-	// In anchore-enterprise windows analyzer, "base" represents unpatched windows images (images with no KBs).
+	// In nextlinux-enterprise windows analyzer, "base" represents unpatched windows images (images with no KBs).
 	// If a vulnerability exists for a Microsoft Product ID and the image has no KBs (which are patches),
 	// then the image must be vulnerable to the image.
 	//nolint:gocritic

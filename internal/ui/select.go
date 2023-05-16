@@ -1,7 +1,7 @@
 package ui
 
 import (
-	"github.com/anchore/govulners-db/internal/ui/loggerui"
+	"github.com/nextlinux/govulners-db/internal/ui/loggerui"
 )
 
 func Select(cfg Config) (uis []UI) {

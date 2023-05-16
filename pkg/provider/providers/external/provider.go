@@ -10,8 +10,8 @@ import (
 
 	"github.com/google/shlex"
 
-	"github.com/anchore/govulners-db/internal/log"
-	"github.com/anchore/govulners-db/pkg/provider"
+	"github.com/nextlinux/govulners-db/internal/log"
+	"github.com/nextlinux/govulners-db/pkg/provider"
 )
 
 var _ provider.Provider = (*pvdr)(nil)

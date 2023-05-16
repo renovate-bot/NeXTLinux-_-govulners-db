@@ -4,9 +4,9 @@ import (
 	"io"
 	"strings"
 
-	"github.com/anchore/govulners-db/internal/log"
-	"github.com/anchore/govulners-db/pkg/data"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal"
+	"github.com/nextlinux/govulners-db/internal/log"
+	"github.com/nextlinux/govulners-db/pkg/data"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal"
 )
 
 type nvdProcessor struct {
@@ -45,7 +45,7 @@ func (p nvdProcessor) Process(reader io.Reader) ([]data.Entry, error) {
 }
 
 func (p nvdProcessor) IsSupported(schemaURL string) bool {
-	matchesSchemaType := strings.Contains(schemaURL, "https://raw.githubusercontent.com/anchore/vunnel/main/schema/vulnerability/nvd/schema-")
+	matchesSchemaType := strings.Contains(schemaURL, "https://raw.githubusercontent.com/nextlinux/vunnel/main/schema/vulnerability/nvd/schema-")
 	if !matchesSchemaType {
 		return false
 	}

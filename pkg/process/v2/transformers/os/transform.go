@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/anchore/govulners-db/pkg/data"
-	"github.com/anchore/govulners-db/pkg/process/common"
-	"github.com/anchore/govulners-db/pkg/process/v2/transformers"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal"
-	govulnersDB "github.com/anchore/govulners/govulners/db/v2"
+	"github.com/nextlinux/govulners-db/pkg/data"
+	"github.com/nextlinux/govulners-db/pkg/process/common"
+	"github.com/nextlinux/govulners-db/pkg/process/v2/transformers"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal"
+	govulnersDB "github.com/nextlinux/govulners/govulners/db/v2"
 )
 
 const (

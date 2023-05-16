@@ -4,9 +4,9 @@ import (
 	"io"
 	"strings"
 
-	"github.com/anchore/govulners-db/internal/log"
-	"github.com/anchore/govulners-db/pkg/data"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal"
+	"github.com/nextlinux/govulners-db/internal/log"
+	"github.com/nextlinux/govulners-db/pkg/data"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal"
 )
 
 // msrcProcessor defines the regular expression needed to signal what is supported
@@ -48,7 +48,7 @@ func (p msrcProcessor) Process(reader io.Reader) ([]data.Entry, error) {
 }
 
 func (p msrcProcessor) IsSupported(schemaURL string) bool {
-	matchesSchemaType := strings.Contains(schemaURL, "https://raw.githubusercontent.com/anchore/vunnel/main/schema/vulnerability/msrc/schema-")
+	matchesSchemaType := strings.Contains(schemaURL, "https://raw.githubusercontent.com/nextlinux/vunnel/main/schema/vulnerability/msrc/schema-")
 	if !matchesSchemaType {
 		return false
 	}

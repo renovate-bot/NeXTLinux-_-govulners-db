@@ -3,7 +3,7 @@ package nvd
 import (
 	"sort"
 
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal/nvd"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal/nvd"
 )
 
 type uniquePkgTracker map[pkgCandidate][]nvd.CpeMatch

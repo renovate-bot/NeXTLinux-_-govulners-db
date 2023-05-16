@@ -16,7 +16,7 @@ package bus
 import (
 	"github.com/wagoodman/go-partybus"
 
-	"github.com/anchore/govulners-db/pkg/event"
+	"github.com/nextlinux/govulners-db/pkg/event"
 )
 
 var publisher partybus.Publisher

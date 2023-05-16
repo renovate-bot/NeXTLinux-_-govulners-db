@@ -5,7 +5,7 @@ import (
 
 	"github.com/sergi/go-diff/diffmatchpatch"
 
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal/nvd"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal/nvd"
 )
 
 func newUniquePkgTrackerFromSlice(candidates []pkgCandidate) uniquePkgTracker {

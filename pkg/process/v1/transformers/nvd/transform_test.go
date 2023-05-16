@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	testUtils "github.com/anchore/govulners-db/pkg/process/tests"
-	"github.com/anchore/govulners-db/pkg/provider/unmarshal"
-	govulnersDB "github.com/anchore/govulners/govulners/db/v1"
+	testUtils "github.com/nextlinux/govulners-db/pkg/process/tests"
+	"github.com/nextlinux/govulners-db/pkg/provider/unmarshal"
+	govulnersDB "github.com/nextlinux/govulners/govulners/db/v1"
 )
 
 const recordSource = "nvdv2:cves"

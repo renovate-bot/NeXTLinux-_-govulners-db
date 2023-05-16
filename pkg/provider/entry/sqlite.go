@@ -11,8 +11,8 @@ import (
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 
-	"github.com/anchore/govulners-db/internal/log"
-	"github.com/anchore/sqlite"
+	"github.com/nextlinux/govulners-db/internal/log"
+	"github.com/nextlinux/sqlite"
 )
 
 var readOptions = []string{

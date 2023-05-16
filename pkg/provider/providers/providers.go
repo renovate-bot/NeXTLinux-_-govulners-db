@@ -5,9 +5,9 @@ import (
 
 	"github.com/mitchellh/mapstructure"
 
-	"github.com/anchore/govulners-db/pkg/provider"
-	"github.com/anchore/govulners-db/pkg/provider/providers/external"
-	"github.com/anchore/govulners-db/pkg/provider/providers/vunnel"
+	"github.com/nextlinux/govulners-db/pkg/provider"
+	"github.com/nextlinux/govulners-db/pkg/provider/providers/external"
+	"github.com/nextlinux/govulners-db/pkg/provider/providers/vunnel"
 )
 
 var ErrNoProviders = fmt.Errorf("no providers configured")
