@@ -54,11 +54,11 @@ require (
 	github.com/ProtonMail/go-crypto v0.0.0-20230217124315-7d5c6f04bbb8 // indirect
 	github.com/acobaugh/osrelease v0.1.0 // indirect
 	github.com/acomagu/bufpipe v1.0.4 // indirect
-	github.com/nextlinux/go-logger v0.0.0-20220728155337-03b66a5207d8 // indirect
-	github.com/nextlinux/go-macholibre v0.0.0-20220308212642-53e6d0aaf6fb // indirect
-	github.com/nextlinux/go-struct-converter v0.0.0-20221118182256-c68fdcfa2092 // indirect
-	github.com/nextlinux/packageurl-go v0.1.1-0.20230104203445-02e0a6721501 // indirect
-	github.com/nextlinux/stereoscope v0.0.0-20230412183729-8602f1afc574 // indirect
+	github.com/anchore/go-logger v0.0.0-20220728155337-03b66a5207d8 // indirect
+	github.com/anchore/go-macholibre v0.0.0-20220308212642-53e6d0aaf6fb // indirect
+	github.com/anchore/go-struct-converter v0.0.0-20221118182256-c68fdcfa2092 // indirect
+	github.com/anchore/packageurl-go v0.1.1-0.20230104203445-02e0a6721501 // indirect
+	github.com/anchore/stereoscope v0.0.0-20230412183729-8602f1afc574 // indirect
 	github.com/andybalholm/brotli v1.0.4 // indirect
 	github.com/aws/aws-sdk-go v1.44.122 // indirect
 	github.com/becheran/wildmatch-go v1.0.0 // indirect
