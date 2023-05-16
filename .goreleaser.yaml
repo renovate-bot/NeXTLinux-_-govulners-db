@@ -1,0 +1,44 @@
+release:
+  # If set to auto, will mark the release as not ready for production
+  # in case there is an indicator for this in the tag e.g. v1.0.0-rc1
+  # If set to true, will mark the release as not ready for production.
+  prerelease: auto
+
+project_name: govulners-db
+
+env:
+  # required to support multi architecture docker builds
+  - DOCKER_CLI_EXPERIMENTAL=enabled
+  - CGO_ENABLED=0
+
+builds:
+  - id: linux-build
+    goos:
+      - linux
+    goarch:
+      - amd64
+      - arm64
+    binary: &binary govulners-db
+    dir: &directory ./cmd/govulners-db
+    # Set the modified timestamp on the output binary to the git timestamp (to ensure a reproducible build)
+    mod_timestamp: &build-timestamp "{{ .CommitTimestamp }}"
+    ldflags: &build-ldflags |
+      -w
+      -X github.com/nextlinux/govulners-db/cmd/govulners-db/application.version={{.Version}}
+      -X github.com/nextlinux/govulners-db/cmd/govulners-db/application.gitCommit={{.Commit}}
+      -X github.com/nextlinux/govulners-db/cmd/govulners-db/application.buildDate={{.Date}}
+      -X github.com/nextlinux/govulners-db/cmd/govulners-db/application.gitDescription={{.Summary}}
+
+  - id: darwin-build
+    goos:
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    binary: *binary
+    dir: *directory
+    mod_timestamp: *build-timestamp
+    ldflags: *build-ldflags
+
+archives:
+  - format: tar.gz
