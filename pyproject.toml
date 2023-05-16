@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "govulners-db"
+version = "0.1.0"
+description = ""
+authors = ["Connect NeXTLINUX <connect@next-linux.systems>"]
+readme = "README.md"
+packages = [{include = "govulners_db"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
